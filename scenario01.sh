@@ -4,8 +4,8 @@ source="./example-log.txt"
 
 #Get Most IP in two date
 
-date_start="01/Jun/2019"
-date_end="01/Jun/2019"
+# date_start="01/Jun/2019"
+# date_end="01/Jun/2019"
 #echo ${date_start//\//\\/}
 #echo ${date_end//\//\\/}
 
