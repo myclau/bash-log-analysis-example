@@ -1,0 +1,26 @@
+eventTimestamp: 2010-03-23T07:56:19.166
+result: Allowed
+protocol: SMS
+payload: RCOMM_SMS
+
+eventTimestamp: 2010-03-23T07:56:19.167
+result: Allowed
+protocol: SMS
+payload: RCOMM_SMS
+
+eventTimestamp: 2010-03-23T07:56:19.186
+result: Allowed
+protocol: SMS
+payload: SMS-MO-FSM
+
+eventTimestamp: 2010-03-23T07:56:19.197
+result: Allowed
+protocol: SMS
+payload: COPS
+
+eventTimestamp: 2010-03-23T07:56:29.519
+result: Blocked
+protocol: SMS
+payload: COPS
+type: URL_IWF
+result: Blocked

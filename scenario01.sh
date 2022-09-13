@@ -14,9 +14,15 @@ date_end="01/Jun/2019"
 
 # cut by tab cut -d$'\t'
 
-cat $source | sed -n '/'"${date_start//\//\\/}"'/,/'"${date_end//\//\\/}"'/p' | cut -d ' ' -f 1 | uniq -c | sort -k 1nr,1 -k 2r,2 | sort -c #| head -1 | cut -d ' ' -f 4
+#using sed
+#cat $source | sed -n '/'"${date_start//\//\\/}"'/,/'"${date_end//\//\\/}"'/p' | cut -d ' ' -f 1 | uniq -c | sort -k 1nr,1 -k 2r,2 | head -1 | cut -d ' ' -f 4
 
+#using awk
+date_start="01/Jun/2019:00:00:00"
+date_end="01/Jun/2019:23:59:59"
 
+#cat $source | remove [ | awk filter from time start to end and return only ip | count ip | sort field 1 first (count) field 2 (ip) | print first line | awk get last field
+cat $source | sed "s/\[//g" | awk -vstart="$date_start" -vend="$date_end" '{ if ($4>=start && $4<=end) print $1 }' | uniq -c | sort -k 1nr,1 -k 2n,2 | head -1 | awk '{print $(NF)}'
 
 #sort usage
 
