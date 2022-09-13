@@ -1,0 +1,1 @@
+# bash-log-analysis-example
