@@ -1,0 +1,76 @@
+{
+    "kind": "List",
+    "apiVersion": "v1",
+    "items": [
+      {
+        "apiVersion": "cert-manager.io/v1",
+        "kind": "Certificate",
+        "metadata": {
+          "name": "cert-foo",
+          "namespace": "cert"
+        },
+        "spec": {
+          "dnsNames": [
+            "foo.com"
+          ],
+          "issuerRef": {
+            "kind": "ClusterIssuer",
+            "name": "issuer"
+          },
+          "secretName": "cert-foo"
+        },
+        "status": {
+          "conditions": [
+            {
+              "lastTransitionTime": "2022-08-04T02:40:12Z",
+              "message": "Certificate is up to date and has not expired",
+              "observedGeneration": 3,
+              "reason": "Ready",
+              "status": "True",
+              "type": "Ready"
+            }
+          ],
+          "notAfter": "2022-11-02T01:40:08Z",
+          "notBefore": "2022-08-04T01:40:09Z",
+          "renewalTime": "2022-10-03T01:40:08Z",
+          "revision": 7
+        }
+      },
+      {
+        "apiVersion": "cert-manager.io/v1",
+        "kind": "Certificate",
+        "metadata": {
+          "name": "cert-bar",
+          "namespace": "cert"
+        },
+        "spec": {
+          "dnsNames": [
+            "bar.com",
+            "baz.com"
+          ],
+          "issuerRef": {
+            "kind": "ClusterIssuer",
+            "name": "issuer"
+          },
+          "secretName": "cert-bar"
+        },
+        "status": {
+          "conditions": [
+            {
+              "lastTransitionTime": "2022-08-04T02:38:13Z",
+              "message": "Certificate is up to date and has not expired",
+              "observedGeneration": 3,
+              "reason": "Ready",
+              "status": "True",
+              "type": "Ready"
+            }
+          ],
+          "notAfter": "2022-11-02T01:38:10Z",
+          "notBefore": "2022-08-04T01:38:11Z",
+          "renewalTime": "2022-10-03T01:38:10Z",
+          "revision": 7
+        }
+      }
+    ]
+  }
+  
